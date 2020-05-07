@@ -1,0 +1,61 @@
+<header>
+  <ul class="mainheader_links" id="navi">
+  
+  
+      <a href="#"><img class="cloudlogo" src="assets/logo.png"></a>
+      <li class="menu"  style="font-size:14px;  margin-left: 10px;"><a href="register">SIGNUP</a></li>
+      <li class=" menu" style="font-size:14px;"><a (click)= "removeall()">SIGNOUT</a></li>
+      <li class=" menu" style="font-size:14px;"><a href="aboutus">About Us</a></li>
+      <li class=" menu" style="font-size:14px;"><a href="cart">My Cart</a></li>
+      <li class=" menu" style="font-size:14px;"><a href="#">HOME</a></li>
+  
+  </ul>
+  
+  </header>
+<ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="static-1">
+    <ngb-panel id="static-1" title="Item Details">
+        <ng-template ngbPanelContent>
+        <div >
+            <div class="card">
+              <div class="card-body">
+               <h1 style="color:black ; font-family: 'Roboto', sans-serif">Items in your cart:<span style="margin-left: 5%;margin-right: 22%; font-family: 'Roboto', sans-serif; color: rgb(85, 47, 255)">
+                  Total value is: {{allTotal}}</span>
+                  <button class="btn btn-outline-success" (click)=md() >CheckOut</button>
+                 </h1>
+                  
+                  <table class="table table-bordered table-responsive table-hover">
+                    <thead class="thead-light">
+                    <tr>
+                      <th>Image</th>
+                      <th>Name & Description</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Add/Remove</th>
+                      <th>Total For Item</th>
+                    </tr>
+                    </thead>
+                    <tr *ngFor="let prod of productAddedToCart;let q = index">
+                      <td><img src="{{prod.productImage}}" width="250px;" height="270px;"/></td>
+                      <td class="text-center">{{prod.productPrice}}-{{prod.Description}}
+                        <br> Applied Coupon : {{coupons.CouponCode}}
+                      </td>
+                      <td>{{prod.productPrice}}</td>
+                      <td>{{prod.Quantity}}</td> 
+                      <td>
+                        <div class="form-inline">
+                        <button type="button"  (click)="onAddQuantity(prod)"  class="btn btn-success">+</button> 
+                        <input type="text" [ngModel] ="prod.Quantity" (ngModelChange) ="prod.Quantity=$event" class="form-control form-inline" id="count">
+                        <button type="button"  (click)="onRemoveQuantity(prod)"   class="btn btn-danger">-</button>
+                        </div>
+                      </td>
+                      <td>{{prod.productPrice * prod.Quantity}}</td> 
+                    </tr>
+                  </table>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+    </ngb-panel>
+        </ngb-accordion>
+   
+  

@@ -1,0 +1,35 @@
+
+
+
+ <form style="margin-left:30%; font-weight: bold; height: 500px; width: 450px; background-color: whitesmoke;
+  border-radius: 20px; "(submit)="register()"  >
+<div style="margin-left: 8%; padding-top: 5%;">
+    <h2 >Registration Form</h2>
+    <p >Please fill in this form to create an account.</p>
+
+    <div class="form-group"  >
+        <input type="text" class="form-control"  name="first_name" id="email" autocomplete="off" placeholder="First Name" [(ngModel)]="credentials.first_name" required> 
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <input type="text" class="form-control" name="last_name" id="email" autocomplete="off" placeholder="Last Name" [(ngModel)]="credentials.last_name" required>
+    </div>
+    <br>
+        <div class="form-group">
+            <input type="text" class="form-control" name="email" id="email" autocomplete="off" placeholder="Email" [(ngModel)]="credentials.email" required>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" id="pwd" autocomplete="off" placeholder="Password" [(ngModel)]="credentials.password" required>
+        </div>
+
+
+        <a>
+            <button type="submit" id="signin" class="btn btn-default" >Register</button>
+        </a>
+
+</div>
+    </form>
+

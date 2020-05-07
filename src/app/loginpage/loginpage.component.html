@@ -1,0 +1,28 @@
+
+
+<body>
+ <form style="margin-left:30%; font-weight: bold; height: 380px; width: 450px; background-color: whitesmoke;
+ border-radius: 20px; "(submit)="login()"  >
+<div style="margin-left: 8%; padding-top: 5%;">
+   <h2 >Login Form</h2>
+   <p >Please fill in this form to login an account.</p>
+
+       <div class="form-group">
+           <input type="text" class="form-control" name="email" id="email" autocomplete="off" placeholder="Email" [(ngModel)]="credentials.email" required>
+       </div>
+       <br>
+
+       <div class="form-group">
+           <input type="password" class="form-control" name="password" id="pwd" autocomplete="off" placeholder="Password" [(ngModel)]="credentials.password" required>
+       </div>
+       <br>
+
+
+       <a>
+           <button type="submit" id="signin" class="btn btn-default" >login</button>
+       </a>
+
+</div>
+   </form>
+
+</body>

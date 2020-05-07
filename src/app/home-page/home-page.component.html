@@ -1,0 +1,69 @@
+
+
+ 
+<body style="width: 100%; height: 100%;">
+  <header>
+    <ul class="mainheader_links" id="navi">
+    
+    
+        <a routerLink="#"><img class="cloudlogo" src="assets/logo.png"></a>
+      <!--   <li style="font-size: medium;">hello {{username}}</li>  -->
+        <li class="menu"  style="font-size:14px;  margin-left: 10px;"><a href="register">SIGNUP</a></li>
+        <li class=" menu" style="font-size:14px;"><a routerLink="login">SIGNIN</a></li>
+        <li class=" menu" style="font-size:14px;"><a routerLink="aboutus">ABOUT US</a></li>
+        <li class=" menu" style="font-size:14px;"><a (click)="mycart()">MY CART </a></li>
+        <li class=" menu" style="font-size:14px;"><a routerLink="#">HOME</a></li>
+        
+    
+    </ul>
+    
+    </header>
+<br>
+
+<carousel>
+    <slide>
+      <img src="assets/bb2.png" alt="first slide" class="b1">
+    </slide>
+    <slide>
+      <img src="assets/bb3.jpg" alt="second slide" class="b2">
+    </slide>
+    <slide>
+      <img src="assets/flip.jpg" alt="third slide" class="m2">
+    </slide>
+    <slide>
+        <img src="assets/m2.jpg" alt="third slide" class="m2">
+      </slide>
+  </carousel> 
+  
+  
+  <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="static-1">
+    
+    <ngb-panel id="static-1">
+  <ng-template ngbPanelContent>
+   
+  <div class="table-responsive" >
+    <h2 style=" text-align: center; font-size :x-large ;font-family: Rockwell  ">Hurry! Use coupons Now! and Get Offers </h2>
+  <table class="table" style="display: inline">
+      <thead>
+          <br>
+          <tr>
+            
+            <th (click)= "clic()"  class="box zoomout"><img src="assets/bbt.jpg" class="bbt">  <span class="hide">Get coupons</span></th>
+        <th></th>
+              <th  (click)= "clic()" class="box zoomout"><img src="assets/flipkart.png" class="flipkart"> <span class="hide">Get coupons</span></th>
+             <th></th>
+              <th (click)= "clic()"  class="box zoomout"><img src="assets/dominos.jpg" class="bbt" > <span class="hide">Get coupons</span></th>
+             <th>
+              <th (click)= "clic()" class="box zoomout"><img src="assets/myntra.png" class="flipkart"> <span class="hide">Get coupons</span></th>
+          </tr>
+      </thead>
+  </table>
+ 
+</div>
+  </ng-template>
+  </ngb-panel>
+  </ngb-accordion>
+
+</body>
+
+<app-footer></app-footer>

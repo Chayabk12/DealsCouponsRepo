@@ -1,0 +1,41 @@
+<body>
+  <app-header></app-header>
+    <div class="card">
+        <div class="card-body">
+        <!--   <p *ngFor="let alert of alerts">
+            <ngb-alert style="width: 300px;" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+          </p>  -->
+            <div >
+             <!--   <h3 class="modal-header" style="color: cornflowerblue" >{{cat.Category}}</h3> -->
+    
+                   
+             <table  *ngFor="let cop of couponsList" class="table table-bordered table-responsive" style="display: inline;margin-left: 5px; border-radius: 15px;">
+                <tr class="coupon">
+                     <td>
+                        <img src="{{cop.CouponImage}}" width="400px;" height="300px;"/>
+                     </td>
+                   </tr>
+
+                   <tr class="coupon">
+                    <td> {{cop.CouponName}}</td>
+                  </tr>
+                   <tr class="coupon">
+                     <td>Price : {{cop.CouponPrice}}</td>
+                   </tr>
+                   <tr class="coupon">
+                    <td style="width: 380px;">{{cop.Description}}</td>
+                  </tr>
+                  <tr class="coupon">
+                     <td class="promo">{{cop.CouponCode}}</td>
+                   </tr >
+                    <tr class="coupon">
+                        <td>
+                            <button type="button" (click) ="clic(cop)" class="btn btn-outline-success" ><b>Use Now</b></button>
+                        </td>
+                      </tr>
+                
+                 </table>
+            </div>
+            </div>
+            </div>
+    </body>

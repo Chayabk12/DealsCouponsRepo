@@ -1,0 +1,38 @@
+<app-header></app-header>
+    <div class="card">
+      <div class="card-body">
+      <!--   <p *ngFor="let alert of alerts">
+          <ngb-alert style="width: 300px;" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+        </p>  -->
+          <div>
+           <!--   <h3 class="modal-header" style="color: cornflowerblue" >{{cat.Category}}</h3> -->
+  
+                   <table  *ngFor="let prod of productList" class="table table-bordered table-responsive" style="display: inline;margin-left: 5px;">
+                 <tr>
+                   <td>
+                      <img src="{{prod.productImage}}" width="250px;" height="300px;"/>
+                   </td>
+                 </tr>
+                 <tr>
+                  <td style="width: 300px;"> {{prod.productName}} </td>
+                </tr>
+                 <tr>
+                   <td>{{prod.productPrice}}</td>
+                 </tr>
+                 <tr>
+                  <td>Price:{{prod.productPrice}}</td>
+                </tr>
+                <tr>
+                   <td style="width: 300px;">{{prod.Description}}</td>
+                 </tr>
+                  <tr>
+                  <td style="width: 300px;"> Coupon Name {{coupons.CouponCode}}</td>
+                </tr> 
+                  <tr>
+                      <td>
+                          <button type="button"   class="btn btn-outline-success" (click)="OnAddCart(prod)"><b>Add to cart</b></button>
+                      </td>
+                    </tr>
+               </table>
+          </div>
+          
